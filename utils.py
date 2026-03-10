@@ -3,7 +3,6 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 
-
 def process_pdf(uploaded_file):
     try:
         reader = PdfReader(uploaded_file)
