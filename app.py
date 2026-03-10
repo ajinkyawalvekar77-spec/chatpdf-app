@@ -1,6 +1,6 @@
 import streamlit as st
 from groq import Groq
-from utils import process_pdf
+from utils import process_pdf, search
 
 # ------------------ Page Config ------------------
 st.set_page_config(
@@ -88,9 +88,9 @@ if st.session_state.current_chat:
                 placeholder = st.empty()
                 placeholder.markdown("🤖 Thinking...")
 
-                # Retrieve similar chunks
-                docs = st.session_state.vectorstore.similarity_search(user_question)
-                context = "\n".join([doc.page_content for doc in docs])
+               # Retrieve similar chunks
+                index, chunks = st.session_state.vectorstore
+                context = search(index, chunks, user_question)
 
                 prompt = f"""
                 Use the context below to answer the question.
