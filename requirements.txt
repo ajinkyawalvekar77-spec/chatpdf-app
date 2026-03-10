@@ -1,5 +1,7 @@
 streamlit
+groq
+PyPDF2
 langchain
 faiss-cpu
-PyPDF2
-openai
+sentence-transformers
+huggingface-hub
