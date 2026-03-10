@@ -2,6 +2,7 @@ streamlit
 groq
 PyPDF2
 langchain
+langchain-community
 faiss-cpu
 sentence-transformers
 huggingface-hub
