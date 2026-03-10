@@ -1,8 +1,6 @@
 streamlit
-groq>=0.9.0
+groq
 PyPDF2
-langchain
-langchain-community
 faiss-cpu
 sentence-transformers
-huggingface-hub
+numpy
